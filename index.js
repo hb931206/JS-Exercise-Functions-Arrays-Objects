@@ -173,8 +173,9 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
+function getLastCarInfo(inventory) {
   /* code here */
+  return `This is a ${inventory[inventory.length - 1].car_make} ${inventory[inventory.length - 1].car_model}`;
 }
 
 /**
@@ -189,7 +190,8 @@ function getLastCarInfo(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
+function getCarInfoById(inventory,id) {
+  return `This is a ${inventory[id].car_make} ${inventory[id].car_model}`;
   /* code here */
 }
 
@@ -201,7 +203,8 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
+function sortCarInventory() {
+
   /* code here */
 }
 
@@ -267,9 +270,9 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a,b) => a+b; // code here!
+const addFive = (a) => a+5; // code here!
+const argTimesTwo = (a) => a*2; // code here!
 
 /**
  * ### Challenge `carMaker`
