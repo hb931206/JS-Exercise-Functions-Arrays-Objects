@@ -80,10 +80,24 @@ function getName(objName) {
 */
 function makeSmartPerson(name) {
   /* code here */
+  const obj = {
+    name: name,
+    sum: function(x,y){
+      return x+y;
+    },
+    speak: function(){
+      return "Hello, my name is " + name;
+      
+    }
+  }
+    return obj; 
+
+    
+  }
 
 
 
-}
+
 
 
 
@@ -145,6 +159,7 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`
 }
 
 /**
