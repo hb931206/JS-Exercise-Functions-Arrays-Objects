@@ -191,6 +191,10 @@ function getLastCarInfo(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoById(inventory,id) {
+  for (var i = 0; i<inventory.length; i++){
+    if (inventory[i].id === id)
+   return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`;
+  }
   
   
   /* code here */
@@ -212,6 +216,7 @@ function sortCarInventory(inventory) {
     return 1;
     return 0;
   })
+  return inventory;
 
   /* code here */
 }
@@ -257,11 +262,14 @@ function getOlderCars(/* code here */) {
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
+  // const germanCars = [];
   // for (var i = 0; i< inventory.length; i++ ){
-  //   if (inventory[i].car_make === "Audi"|"Mercedes"|"Volkswagen" | "BMW"){
+  //   if (inventory[i].car_make === "Audi"||"Mercedes"||"Volkswagen" || "BMW"){
   //     return inventory;
   //   }
   // }
+  // germanCars.push(inventory[i].car_make);
+  // return germanCars;
 }
 
 /**
