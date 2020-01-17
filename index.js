@@ -252,7 +252,15 @@ function getModelYears(inventory) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
+function getOlderCars(inventory, num) {
+  let old = [];
+
+  for (var i = 0; i<inventory.length; i++){
+    if (inventory[i].car_year <= num) {
+      old.push(inventory[i])
+    }
+  }
+  return old;
   /* code here */
 }
 
@@ -268,15 +276,17 @@ function getOlderCars(/* code here */) {
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
-  // const germanCars = [];
-  // for (var i = 0; i< inventory.length; i++ ){
-  //   if (inventory[i].car_make === "Audi"||"Mercedes"||"Volkswagen" || "BMW"){
-  //     return inventory;
-  //   }
-  // }
-  // germanCars.push(inventory[i].car_make);
-  // return germanCars;
+  let german = [];
+  for (let i = 0; i<inventory.length; i++){
+    if (inventory[i].car_make === "Audi"|| inventory[i].car_make === "Mercedes-Benz"|| inventory[i].car_make === "Volkswagen" ||inventory[i].car_make === "BMW"){
+      german.push(inventory[i])
+    }
+
+  }
+
+  return german;
 }
+
 
 /**
  * ### Challenge refactor to arrow functions
@@ -340,3 +350,4 @@ if (typeof exports !== 'undefined') {
   if (addFive) { module.exports.addFive = addFive }
   if (argTimesTwo) { module.exports.argTimesTwo = argTimesTwo }
 }
+
